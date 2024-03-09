@@ -63,7 +63,8 @@ const App = (): JSX.Element => {
       
       <View style={styles.container}>
       <View style={styles.titlecontainer}>
-        <Text style={styles.titletext}>Indian Currency Converter</Text>
+        <Image source={require('../src/assets/currency.png')} style={styles.image} />
+         <Text style={styles.titletext}>Indian Currency Converter</Text>
         </View>
         <View style={styles.topContainer}>
           <View style={styles.rupeesContainer}>
@@ -122,17 +123,28 @@ const App = (): JSX.Element => {
 }
 
 const styles = StyleSheet.create({
+  image: {
+        width: 100,
+        height: 100,
+        
+      },
   titletext:{
     fontSize: 22,
     fontWeight: 'bold',
     fontStyle: 'italic',
     textAlign: 'center',
     color: 'black',
-    marginTop: 15,
+    marginTop: 10,
+    
   },
   titlecontainer: {
+    height: 100,
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'row',
     backgroundColor: '#edbc37',
-    height: 60,
+    
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,
   },
@@ -174,6 +186,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 20,
     backgroundColor: 'white',
+    
   },
   bottomContainer: {
     flex: 3,
